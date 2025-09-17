@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitLife Planner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    body {
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6
+    }
+
+    header {
+      background: #1e293b;
+      color: #fff;
+      padding: 16px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    header h1 {
+      font-size: 1.3rem
+    }
+
+    header nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500
+    }
+
+    header nav a:hover {
+      color: #38bdf8
+    }
+
+    .hero {
+      background: url('https://picsum.photos/id/1005/1600/900') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px
+    }
+
+    .hero h2 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7)
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 20px
+    }
+
+    .btn {
+      background: #38bdf8;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold
+    }
+
+    .btn:hover {
+      background: #0ea5e9
+    }
+
+    .section {
+      padding: 60px 10%;
+      text-align: center
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: #0f172a
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05)
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-bottom: 12px
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+      color: #0f172a
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #475569
+    }
+
+    .planner {
+      background: #f1f5f9;
+      padding: 40px;
+      border-radius: 8px
+    }
+
+    .planner ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      max-width: 400px;
+      margin: 0 auto
+    }
+
+    .planner li {
+      padding: 10px;
+      border-bottom: 1px solid #e2e8f0
+    }
+
+    .chart {
+      height: 50px;
+      background: linear-gradient(90deg, #38bdf8 70%, #e2e8f0 30%);
+      margin: 20px auto;
+      border-radius: 8px;
+      max-width: 500px
+    }
+
+    footer {
+      background: #1e293b;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>FitLife</h1>
+    <nav>
+      <a href="#workouts">Workouts</a>
+      <a href="#planner">Planner</a>
+      <a href="#progress">Progress</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Transform Your Body & Mind</h2>
+    <p>Personalized workout plans to achieve your fitness goals</p>
+    <a href="#workouts" class="btn">Start Training</a>
+  </section>
+
+  <section id="workouts" class="section">
+    <h2>Workout Categories</h2>
+    <div class="grid">
+      <div class="card"><img src="https://img.icons8.com/ios-filled/100/dumbbell.png" />
+        <h3>Strength</h3>
+        <p>Build muscle with weight training.</p>
+      </div>
+      <div class="card"><img src="https://img.icons8.com/ios-filled/100/running.png" />
+        <h3>Cardio</h3>
+        <p>Improve stamina with running & cycling.</p>
+      </div>
+      <div class="card"><img src="https://img.icons8.com/ios-filled/100/yoga.png" />
+        <h3>Yoga</h3>
+        <p>Enhance flexibility and mindfulness.</p>
+      </div>
+      <div class="card"><img src="https://img.icons8.com/ios-filled/100/boxing.png" />
+        <h3>HIIT</h3>
+        <p>Burn fat with high intensity workouts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="planner" class="section">
+    <h2>Weekly Planner</h2>
+    <div class="planner">
+      <ul>
+        <li>Mon - Chest & Triceps</li>
+        <li>Tue - Back & Biceps</li>
+        <li>Wed - Legs & Abs</li>
+        <li>Thu - Cardio & Core</li>
+        <li>Fri - Shoulders & Arms</li>
+        <li>Sat - Yoga & Stretching</li>
+        <li>Sun - Rest</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="progress" class="section">
+    <h2>Track Your Progress</h2>
+    <div class="chart"></div>
+    <p>Your workout completion: <strong>70%</strong> this week</p>
+  </section>
+
+  <footer>
+    © 2025 FitLife Planner. All rights reserved.
+  </footer>
+</body>
+
+</html>
